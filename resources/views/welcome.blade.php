@@ -23,10 +23,11 @@
             <td>Green</td>
             <td>Blue</td>
             <td>RogzitesIdeje</td>
+            <td>SZÍN</td>
         </tr>
     </table>
-    @foreach ($tablazat as $item) {{-- tablazat= a controller neve --}}
-        <table class="table table-striped">
+    <table class="table table-striped">
+            @foreach ($tablazat as $item) {{-- tablazat= a controller neve --}}
             
         <tr>
             <td>{{$item->szid}}</td>
@@ -34,9 +35,10 @@
             <td>{{$item->green}}</td>
             <td>{{$item->blue}}</td>
             <td>{{$item->rogzitesIdeje}}</td>
+            <td style="background-color: rgb({{$item->red}}, {{$item->green}}, {{$item->blue}})"></td>
         </tr>
+        @endforeach
         </table>
-    @endforeach
     </div>
 </body>
 </html>
